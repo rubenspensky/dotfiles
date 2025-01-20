@@ -10,3 +10,6 @@ vim.keymap.set("n", "<leader>w", ":w<CR>", { noremap = true, silent = true, desc
 
 -- Salir con 'leader q'
 vim.keymap.set("n", "<leader>q", ":q<CR>", { noremap = true, silent = true, desc = "Quit file" })
+
+-- Mapeo para limpiar ^M después de pegar
+vim.keymap.set("n", "<leader>m", ":CleanM<CR>", { silent = true, desc = "Clean ^M characters" })
