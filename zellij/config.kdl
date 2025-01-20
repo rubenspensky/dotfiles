@@ -495,33 +495,21 @@ keybinds clear-defaults=true {
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 
-themes {
-    kanagawa_dragon {
-        fg "#dcdccc"
-        bg "#1a1a1a"
-        red "#C34043"
-        green "#728F66"
-        yellow "#9D8F6F"
-        blue "#8BA4B0"
-        magenta "#ff79c6"
-        cyan "#8be9fd"
-        orange "#ffb86c"
-        black "#282828"
-        white "#8D908D"
-    } 
+theme "catppuccin-mocha"
 
-    everforest {
-        fg "#d3c6aa"
-        bg "#282828"
-        red "#e67e80"
-        green "#a7c080"
-        yellow "#dbbc7f"
-        blue "#7fbbb3"
-        magenta "#d699b6"
-        cyan "#83c092"
-        orange "#e69875"
-        black "#1a1a1a"
-        white "#8D908D"
+themes {
+    catppuccin-mocha {
+        bg "#1e1e2e"
+        fg "#cdd6f4"
+        red "#f38ba8"
+        green "#a6e3a1"
+        blue "#89b4fa"
+        yellow "#f9e2af"
+        magenta "#f5c2e7"
+        orange "#fab387"
+        cyan "#89dceb"
+        black "#181825"
+        white "#cdd6f4"
     }
 }
 

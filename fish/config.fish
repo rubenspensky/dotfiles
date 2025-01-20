@@ -1,9 +1,23 @@
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
+
+# Añade estas líneas al final del archivo
+if test -d "/home/linuxbrew/.linuxbrew/opt/mysql-client/bin"
+    fish_add_path /home/linuxbrew/.linuxbrew/opt/mysql-client/bin
+    set -gx LDFLAGS "-L/home/linuxbrew/.linuxbrew/opt/mysql-client/lib"
+    set -gx CPPFLAGS "-I/home/linuxbrew/.linuxbrew/opt/mysql-client/include"
+    set -gx PKG_CONFIG_PATH "/home/linuxbrew/.linuxbrew/opt/mysql-client/lib/pkgconfig"
+end
+
 set -gx PATH /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin $PATH
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 set -gx PATH /home/linuxbrew/.linuxbrew/opt/lua/bin /home/linuxbrew/.linuxbrew/opt/luarocks/bin $PATH
+
+if type -q fnm
+    fnm env --use-on-cd | source
+end
 # ~/.config/fish/config.fish
 
 # Define los colores
@@ -27,11 +41,6 @@ set -g fish_color_autosuggestion 808080
 set -g fish_color_user brblue
 set -g fish_color_host normal
 set -g fish_color_cancel -r
-nvm use 18
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
 
 if not set -q ZELLIJ
     zellij
