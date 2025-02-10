@@ -1,4 +1,4 @@
-keybinds {
+keybinds clear-defaults=true {
     normal {
         // Navegación entre paneles (como LazyVim)
         bind "Alt h" { MoveFocus "Left"; }
@@ -89,13 +89,5 @@ keybinds {
     }
 }
 
-// Aquí añades la configuración del tema
-theme "catppuccin-mocha"  // O el tema que prefieras
 
-// Y aquí puedes añadir personalizaciones de UI
-ui {
-    pane_frames {
-        rounded_corners true
-        hide_session_name true
-    }
-}
+theme "catppuccin-latte"
