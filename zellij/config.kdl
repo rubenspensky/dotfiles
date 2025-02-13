@@ -89,5 +89,7 @@ keybinds clear-defaults=true {
     }
 }
 
+default_layout "work"
+
 
 theme "catppuccin-latte"
