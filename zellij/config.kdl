@@ -21,6 +21,14 @@ keybinds clear-defaults=true {
 
         // Maximizar/Zoom
         bind "Alt z" { ToggleFocusFullscreen; }
+
+        bind "Alt t" { NewTab; }
+
+         bind "Alt f" {
+            SwitchToMode "Pane";
+            ToggleFloatingPanes;
+            SwitchToMode "Normal";
+        }
     }
 
     pane {
