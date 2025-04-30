@@ -2,7 +2,8 @@
 # ------------------------------
 set -Ux PATH $PATH $HOME/go/bin
 set -gx PATH /home/linuxbrew/.linuxbrew/bin /home/linuxbrew/.linuxbrew/sbin $PATH
-
+set --export PATH $HOME/.bun/bin $PATH
+set -gx PATH $HOME/bin $PATH
 # Configuración de Homebrew
 # ------------------------------
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -40,3 +41,7 @@ end
 if not set -q ZELLIJ
     zellij
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

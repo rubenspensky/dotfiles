@@ -8,9 +8,9 @@ return {
         ["core.dirman"] = {
           config = {
             workspaces = {
-              notas = "~/notas",
+              notes = "~/notes",
             },
-            default_workspace = "notas",
+            default_workspace = "notes",
             index = "index.norg",
           },
         },
@@ -22,7 +22,7 @@ return {
         ["core.journal"] = {
           config = {
             strategy = "flat",
-            workspace = "notas",
+            workspace = "notes",
           },
         },
         ["core.concealer"] = {},
