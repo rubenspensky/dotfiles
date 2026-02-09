@@ -7,3 +7,5 @@ vim.opt.swapfile = false -- No usa un archivo swap
 vim.opt.writebackup = false -- No mantiene un archivo de respaldo cuando se escribe
 vim.opt.clipboard = "unnamedplus" -- Esto es lo único que necesitamos para copiar/pegar
 vim.g.snacks_animate = false
+
+pcall(vim.cmd.colorscheme, "catppuccin")
