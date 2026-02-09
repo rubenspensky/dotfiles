@@ -1,0 +1,88 @@
+
+/* Night E-Ink — Waybar */
+
+* {
+  font-family: "JetBrains Mono", "Noto Sans", "Noto Sans Emoji";
+  font-size: 13px;
+  min-height: 0;
+}
+
+/* Barra completa transparente */
+window#waybar {
+  background: transparent;
+  color: #E7E2D9; /* marfil suave */
+}
+
+/* El pill central */
+.modules-center {
+  background: rgba(12, 15, 18, 0.92); /* #0C0F12 con alpha */
+  margin-top: 0px;
+
+  /* medio círculo abajo */
+  border-radius: 0 0 14px 14px;
+
+  padding: 4px 10px;
+
+  /* borde ultra sutil (mate) */
+  border: 1px solid rgba(26, 31, 36, 0.85); /* #1A1F24 */
+}
+
+/* Espaciado entre módulos */
+#workspaces,
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+  padding: 0 10px;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 8px;
+  margin: 1px 3px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(231, 226, 217, 0.72); /* texto más apagado */
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  background: rgba(198, 176, 137, 0.18); /* sepia tenue */
+  color: #E7E2D9;
+  border: 1px solid rgba(198, 176, 137, 0.35);
+}
+
+#workspaces button:hover {
+  background: rgba(231, 226, 217, 0.06); /* hover casi imperceptible */
+}
+
+/* Reloj apenas más presente */
+#clock {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Estados: evita rojos chillones, usa “tinta” */
+#network.disconnected {
+  color: rgba(231, 226, 217, 0.55);
+}
+
+#pulseaudio.muted {
+  color: rgba(198, 176, 137, 0.85);
+}
+
+#battery.warning {
+  color: rgba(198, 176, 137, 0.85);
+}
+
+#battery.critical {
+  color: rgba(231, 226, 217, 0.70);
+}
+
+/* Tray más discreto */
+#tray {
+  padding-right: 8px;
+}
+

@@ -1,0 +1,68 @@
+
+/* Night E-Ink — Wofi */
+
+window {
+  margin: 0px;
+  border: 1px solid rgba(26, 31, 36, 0.90); /* #1A1F24 */
+  border-radius: 14px;
+  background-color: rgba(12, 15, 18, 0.96); /* #0C0F12 */
+  font-family: "JetBrains Mono", "Noto Sans", "Noto Sans Emoji";
+  font-size: 14px;
+}
+
+#outer-box {
+  padding: 14px;
+}
+
+#input {
+  margin: 0px 0px 12px 0px;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  color: #E7E2D9; /* marfil */
+  background-color: rgba(7, 8, 9, 0.85); /* #070809 */
+
+  border: 1px solid rgba(26, 31, 36, 0.80);
+  box-shadow: none;
+}
+
+#inner-box {
+  margin: 0px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+#scroll {
+  margin: 0px;
+}
+
+#entry {
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: rgba(231, 226, 217, 0.82);
+}
+
+#entry image {
+  margin-right: 10px;
+  opacity: 0.9;
+}
+
+#entry:selected {
+  background-color: rgba(198, 176, 137, 0.16); /* sepia tenue */
+  color: #E7E2D9;
+  border: 1px solid rgba(198, 176, 137, 0.28);
+}
+
+#text {
+  margin: 0px;
+  padding: 0px;
+}
+
+#text:selected {
+  color: #E7E2D9;
+}
+
+#expander-box {
+  background-color: transparent;
+}

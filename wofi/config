@@ -1,0 +1,13 @@
+mode=drun
+prompt=search...
+width=520
+height=320
+location=center
+allow_images=true
+image_size=18
+gtk_dark=true
+term=kitty
+insensitive=true
+no_actions=true
+hide_scroll=true
+matching=fuzzy

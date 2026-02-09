@@ -1,0 +1,35 @@
+
+# Mako — Night E-Ink
+
+font=JetBrainsMono Nerd Font 11
+background-color=#0C0F12EE
+text-color=#F3EEE6FF
+border-color=#1A1F24FF
+progress-color=over #C6B08955
+
+border-size=1
+border-radius=12
+padding=12
+margin=10
+width=420
+height=120
+default-timeout=4500
+
+# Posición (ajústalo si te estorba con tu pill de waybar)
+anchor=top-right
+
+# Urgencias (sin neón)
+[urgency=low]
+border-color=#1A1F24FF
+background-color=#0C0F12E6
+text-color=#C6BFB6FF
+
+[urgency=normal]
+border-color=#1A1F24FF
+background-color=#0C0F12EE
+text-color=#F3EEE6FF
+
+[urgency=high]
+border-color=#C6B089FF
+background-color=#0C0F12F2
+text-color=#F3EEE6FF
