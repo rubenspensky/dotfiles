@@ -54,3 +54,4 @@ ai() {
   print -z -- "$cmd"
 }
 
+export PATH="$HOME/.local/bin:$PATH"
