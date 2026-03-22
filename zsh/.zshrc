@@ -43,7 +43,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting AL FINAL
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source ~/zsh-opencode-ai/zsh-opencode-ai.plugin.zsh
 
 ai() {
   local cmd
