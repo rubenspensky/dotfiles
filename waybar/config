@@ -15,7 +15,7 @@
   ],
 
   "hyprland/workspaces": {
-    "all-outputs": true,
+    "all-outputs": false,
     "disable-scroll": true,
     "format": "{name}"
   },
@@ -23,7 +23,8 @@
   "clock": {
     "format": "{:%a %d · %H:%M}",
     "tooltip": true,
-    "tooltip-format": "{:%A %d %B %Y}"
+    "tooltip-format": "{:%A %d %B %Y}",
+    "on-click": "yad --calendar --title='Calendario'"
   },
 
   "network": {
@@ -37,8 +38,10 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 Mute",
+    "format": "{icon} {volume}% {format_source}",
+    "format-muted": "󰝟 Mute {format_source}",
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
     "format-icons": {
       "headphone": "󰋋",
       "hands-free": "󰋎",
@@ -63,4 +66,3 @@
 
   "tray": { "spacing": 8 }
 }
-
