@@ -54,3 +54,8 @@ ai() {
 }
 
 export PATH="$HOME/.local/bin:$PATH"
+
+eval $(luarocks --lua-version 5.1 path --bin)
+
+alias ll='ls -la'   
+alias leet='nvim -c "Neetcode"'

@@ -36,8 +36,8 @@ ForegroundActive=146,110,228
 ForegroundLink=146,110,228
 
 [Colors:Selection]
-BackgroundAlternate=40,40,40
-BackgroundNormal=40,40,40
+BackgroundAlternate=102,77,159
+BackgroundNormal=102,77,159
 DecorationFocus=146,110,228
 DecorationHover=146,110,228
 ForegroundActive=146,110,228
@@ -71,7 +71,7 @@ ForegroundLink=146,110,228
 ForegroundNormal=255,255,255
 
 [General]
-ColorScheme=KindleDark
+ColorSchemeHash=f1a10acea656a90651ac6e4a4447cb9fb8438f55
 
 [KDE]
 AutomaticLookAndFeel=false

@@ -3,7 +3,7 @@
   "position": "top",
   "height": 26,
 
-  "modules-left": [],
+  "modules-left": ["custom/alexa"],
 
   "modules-center": [
     "hyprland/workspaces",
@@ -64,5 +64,13 @@
     "format-critical": "🪫 {capacity}%"
   },
 
-  "tray": { "spacing": 8 }
+  "tray": { "spacing": 8 },
+
+  "custom/alexa": {
+    "exec": "~/.config/waybar/alexa-status.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true
+  }
 }

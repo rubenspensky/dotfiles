@@ -86,3 +86,35 @@ window#waybar {
   padding-right: 8px;
 }
 
+/* ── Alexa status ─────────────────────────────────────── */
+#custom-alexa {
+  background: rgba(12, 15, 18, 0.92);
+  border: 1px solid rgba(26, 31, 36, 0.85);
+  border-radius: 0 0 14px 14px;
+  padding: 4px 14px;
+  margin-top: 0px;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+/* offline / idle: barely visible — not distracting */
+#custom-alexa.offline,
+#custom-alexa.idle {
+  color: rgba(231, 226, 217, 0.30);
+}
+
+/* recording: warm red — needs attention */
+#custom-alexa.recording {
+  color: #E07878;
+}
+
+/* processing: sepia — same accent as workspaces */
+#custom-alexa.processing {
+  color: #C6B089;
+}
+
+/* speaking: soft teal — distinct from the others */
+#custom-alexa.speaking {
+  color: #7AB8A0;
+}
+
