@@ -43,19 +43,20 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting AL FINAL
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-ai() {
-  local cmd
-  cmd="$(opencode run "You are a shell command generator. Only output the raw command, nothing else. Task: $*" 2>/dev/null)" || return
-  cmd="${cmd//$'\r'/}"
-  cmd="${cmd##[[:space:]]#}"
-  cmd="${cmd%%[[:space:]]#}"
-  print -z -- "$cmd"
-}
-
 export PATH="$HOME/.local/bin:$PATH"
 
 eval $(luarocks --lua-version 5.1 path --bin)
 
 alias ll='ls -la'   
 alias leet='nvim -c "Neetcode"'
+
+export EDITOR=nvim
+export TERM=xterm-256color
+export AWS_PROFILE=AdministratorAccess-705777572913
+
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# load local secrets automatically
+if [ -f "$HOME/.env.local" ]; then
+    source "$HOME/.env.local"
+fi
