@@ -60,3 +60,18 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 if [ -f "$HOME/.env.local" ]; then
     source "$HOME/.env.local"
 fi
+
+# Better cd
+eval "$(zoxide init zsh)"
+
+# Fuzzy finder keybindings
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+# Better history
+eval "$(atuin init zsh)"
+
+alias ls='eza --icons'
+alias ll='eza -la --icons --git'
+alias cat='bat'
+alias grep='rg'

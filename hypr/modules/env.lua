@@ -1,0 +1,7 @@
+hl.env("XCURSOR_SIZE",         "24")
+hl.env("HYPRCURSOR_SIZE",      "24")
+hl.env("AQ_DRM_DEVICES",       "/dev/dri/card1:/dev/dri/card0:/dev/dri/card2")
+hl.env("QT_QPA_PLATFORMTHEME", "kde")
+hl.env("XDG_CURRENT_DESKTOP",  "KDE")
+hl.env("XDG_SESSION_DESKTOP",  "KDE")
+hl.env("XDG_MENU_PREFIX",      "plasma-")
