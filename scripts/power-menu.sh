@@ -16,7 +16,7 @@ case "$choice" in
     exec systemctl suspend
     ;;
   "Cerrar sesion")
-    exec hyprctl dispatch exit
+    exec hyprctl dispatch 'hl.dsp.exit()'
     ;;
   "Reiniciar")
     exec systemctl reboot

@@ -4,8 +4,9 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
 	hl.exec_cmd("mako")
+	hl.exec_cmd("hypridle")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd(
-		"awww img /home/dragon/.dotfiles/hypr/wallpapers/akira.png --transition-type any --transition-duration 1"
+		"awww img /home/dragon/.dotfiles/hypr/wallpapers/evangelion.png.png --transition-type any --transition-duration 1"
 	)
 end)

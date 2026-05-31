@@ -54,7 +54,7 @@ export EDITOR=nvim
 export TERM=xterm-256color
 export AWS_PROFILE=AdministratorAccess-705777572913
 
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # load local secrets automatically
 if [ -f "$HOME/.env.local" ]; then
@@ -74,4 +74,8 @@ eval "$(atuin init zsh)"
 alias ls='eza --icons'
 alias ll='eza -la --icons --git'
 alias cat='bat'
-alias grep='rg'
+#alias grep='rg'
+
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
+#
+export PATH=$JAVA_HOME/bin:$PATH

@@ -5,6 +5,8 @@
 
   "modules-left": ["custom/alexa"],
 
+  "modules-right": ["hyprland/submap"],
+
   "modules-center": [
     "hyprland/workspaces",
     "clock",
@@ -65,6 +67,11 @@
   },
 
   "tray": { "spacing": 8 },
+
+  "hyprland/submap": {
+    "format": "󰌾 keybinds off",
+    "tooltip": false
+  },
 
   "custom/alexa": {
     "exec": "~/.config/waybar/alexa-status.sh",

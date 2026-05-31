@@ -86,6 +86,21 @@ window#waybar {
   padding-right: 8px;
 }
 
+/* ── Submap indicator ────────────────────────────────── */
+.modules-right {
+  background: rgba(12, 15, 18, 0.92);
+  border: 1px solid rgba(198, 176, 137, 0.5);
+  border-radius: 0 0 14px 14px;
+  margin-top: 0px;
+}
+
+#submap {
+  padding: 4px 14px;
+  color: #C6B089;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
 /* ── Alexa status ─────────────────────────────────────── */
 #custom-alexa {
   background: rgba(12, 15, 18, 0.92);
