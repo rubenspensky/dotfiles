@@ -2,43 +2,56 @@
   "layer": "top",
   "position": "top",
   "height": 26,
-
-  "modules-left": ["custom/alexa"],
-
-  "modules-right": ["hyprland/submap"],
-
+  "modules-left": [
+    "custom/alexa"
+  ],
+  "modules-right": [
+    "custom/codex",
+    "hyprland/submap"
+  ],
   "modules-center": [
     "hyprland/workspaces",
     "clock",
+    "cpu",
+    "memory",
     "network",
     "pulseaudio",
     "battery",
     "tray"
   ],
-
   "hyprland/workspaces": {
     "all-outputs": false,
     "disable-scroll": true,
     "format": "{name}"
   },
-
   "clock": {
     "format": "{:%a %d · %H:%M}",
     "tooltip": true,
     "tooltip-format": "{:%A %d %B %Y}",
     "on-click": "yad --calendar --title='Calendario'"
   },
-
+  "cpu": {
+    "interval": 2,
+    "format": "󰘚 {usage}%",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%\n{avg_frequency} GHz"
+  },
+  "memory": {
+    "interval": 5,
+    "format": "󰍛 {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:.1f}G / {total:.1f}G"
+  },
   "network": {
-    "format-wifi": "{essid}",
-    "format-ethernet": "LAN",
-    "format-disconnected": "Sin red",
+    "interval": 2,
+    "format-wifi": "󰤨 {essid}  ↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "format-ethernet": "󰈀 LAN  ↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+    "format-disconnected": "󰤭 Sin red",
     "tooltip": true,
     "tooltip-format-wifi": "Wi-Fi: {essid}\nSeñal: {signalStrength}%\nIP: {ipaddr}",
     "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
     "tooltip-format-disconnected": "Desconectado"
   },
-
   "pulseaudio": {
     "format": "{icon} {volume}% {format_source}",
     "format-muted": "󰝟 Mute {format_source}",
@@ -51,33 +64,47 @@
       "phone": "󰄜",
       "portable": "󰄜",
       "car": "󰄜",
-      "default": ["󰕿", "󰖀", "󰕾"]
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
     },
     "scroll-step": 5,
     "on-click": "pavucontrol"
   },
-
   "battery": {
-    "states": { "warning": 30, "critical": 15 },
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
     "format": "{capacity}%",
     "format-charging": "⚡ {capacity}%",
     "format-plugged": "🔌 {capacity}%",
     "format-warning": "⚠ {capacity}%",
     "format-critical": "🪫 {capacity}%"
   },
-
-  "tray": { "spacing": 8 },
-
+  "tray": {
+    "spacing": 8
+  },
   "hyprland/submap": {
     "format": "󰌾 keybinds off",
     "tooltip": false
   },
-
   "custom/alexa": {
     "exec": "~/.config/waybar/alexa-status.sh",
     "interval": 1,
     "return-type": "json",
     "format": "{}",
     "tooltip": true
+  },
+  "custom/codex": {
+    "exec": "~/.config/waybar/codex-quota.sh",
+    "interval": 10,
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "on-click": "pkill -SIGRTMIN+8 waybar || true",
+    "signal": 8
   }
 }

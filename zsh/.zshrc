@@ -79,3 +79,13 @@ alias cat='bat'
 export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
 #
 export PATH=$JAVA_HOME/bin:$PATH
+alias cka='ZDOTDIR=~/.dotfiles/cka zsh'
+
+# bun completions
+[ -s "/home/dragon/.bun/_bun" ] && source "/home/dragon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias k=kubectl

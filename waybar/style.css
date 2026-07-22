@@ -30,6 +30,8 @@ window#waybar {
 /* Espaciado entre módulos */
 #workspaces,
 #clock,
+#cpu,
+#memory,
 #network,
 #pulseaudio,
 #battery,
@@ -101,8 +103,15 @@ window#waybar {
   letter-spacing: 0.3px;
 }
 
+/* ── CPU / RAM ────────────────────────────────────────── */
+#cpu.high,
+#memory.critical {
+  color: rgba(231, 226, 217, 0.70);
+}
+
 /* ── Alexa status ─────────────────────────────────────── */
-#custom-alexa {
+#custom-alexa,
+#custom-codex {
   background: rgba(12, 15, 18, 0.92);
   border: 1px solid rgba(26, 31, 36, 0.85);
   border-radius: 0 0 14px 14px;
@@ -110,6 +119,19 @@ window#waybar {
   margin-top: 0px;
   font-size: 13px;
   transition: color 0.2s ease;
+}
+
+/* ── Codex quota ─────────────────────────────────────── */
+#custom-codex.normal {
+  color: #7AB8A0;
+}
+
+#custom-codex.warning {
+  color: #C6B089;
+}
+
+#custom-codex.critical {
+  color: #E07878;
 }
 
 /* offline / idle: barely visible — not distracting */

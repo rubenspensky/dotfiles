@@ -1,4 +1,7 @@
 hl.on("hyprland.start", function()
+	hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
+	hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP HYPRLAND_INSTANCE_SIGNATURE")
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
 	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
@@ -7,6 +10,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd(
-		"awww img /home/dragon/.dotfiles/hypr/wallpapers/evangelion.png.png --transition-type any --transition-duration 1"
+		"awww img /home/dragon/.dotfiles/hypr/wallpapers/evangelion.png --transition-type any --transition-duration 1"
 	)
 end)

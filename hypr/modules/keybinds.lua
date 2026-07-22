@@ -6,6 +6,7 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("wofi --show drun"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | wofi --dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("/home/dragon/.dotfiles/scripts/fixed-clipboard.sh"))
 hl.define_submap("keybinds_off", function()
 	hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("hyprctl dispatch 'hl.dsp.submap(\"\")'"))
 end)
@@ -88,3 +89,8 @@ hl.bind(
 		'mkdir -p ~/Pictures/Screenshots && grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +\'%Y-%m-%d_%H-%M-%S\').png && notify-send "Screenshot" "Guardada en ~/Pictures/Screenshots"'
 	)
 )
+
+-- warpd: keyboard-driven pointer
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("warpd --hint")) -- hint mode
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("warpd --normal")) -- normal mode
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("warpd --grid")) -- grid mode
